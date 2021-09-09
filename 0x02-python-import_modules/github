@@ -1,0 +1,15 @@
+#!/bin/bash
+echo 'Type file name or .'
+read fileName
+
+git add $fileName
+
+echo 'Type commit message'
+read commitMessage
+
+git commit -m "$commitMessage"
+
+echo 'Choose branch'
+read branch
+
+git push -u origin $branch
